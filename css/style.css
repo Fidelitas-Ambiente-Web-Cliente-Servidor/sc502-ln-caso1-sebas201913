@@ -1,0 +1,150 @@
+:root {
+  /* ─── Paleta de colores ─────────────────────────
+     TODO: Podés cambiar estos valores para personalizar
+     el tema de tu restaurante
+  ─────────────────────────────────────────────── */
+  --color-primario:    #2C3E50;
+  --color-secundario:  #E67E22;
+  --color-fondo:       #FAF8F5;
+  --color-texto:       #333333;
+  --color-claro:       #FFFFFF;
+  --color-reserva-vip: #FFF3CD; /* fondo para grupos de 6+ personas */
+
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-cuerpo: 'Lato', sans-serif;
+}
+
+/* ─── RESET Y BASE ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* ─── ENCABEZADO ─── */
+.encabezado {
+  background-color: var(--color-primario);
+  color: var(--color-claro);
+  padding: 50px 0;
+}
+
+.encabezado h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.encabezado p {
+  font-size: 1.2rem;
+}
+
+/* ─── TITULOS ─── */
+.titulo-seccion {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ─── FORMULARIO ─── */
+.formulario-estudiante {
+  background-color: var(--color-claro);
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.btn-agregar {
+  background-color: var(--color-secundario);
+  color: var(--color-claro);
+  width: 100%;
+  font-weight: 700;
+}
+
+.btn-agregar:hover {
+  background-color: var(--color-primario);
+  color: var(--color-claro);
+}
+
+.mensaje-error {
+  color: #B00020;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* ─── TABLA ─── */
+.tabla-estudiantes {
+  background-color: var(--color-claro);
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.tabla-estudiantes th {
+  background-color: var(--color-primario);
+  color: var(--color-claro);
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.tabla-estudiantes td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.tabla-estudiantes tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ─── ESTILOS CONDICIONALES ─── */
+.nota-alta {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: 700;
+}
+
+.nota-baja {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: 700;
+}
+
+/* ─── RESUMEN ─── */
+.resumen {
+  background-color: var(--color-claro);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.resumen p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.resumen span {
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background-color: var(--color-primario);
+  color: var(--color-claro);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}

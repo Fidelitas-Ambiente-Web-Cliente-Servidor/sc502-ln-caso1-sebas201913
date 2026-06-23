@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante Ficticio</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <div class="container text-center">
+      <h1>Registro de Estudiantes</h1>
+      <p>Sistema para registrar y visualizar notas</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- FORMULARIO DE ESTUDIANTES -->
+    <section class="mb-5">
+      <h2 class="titulo-seccion">Agregar Estudiante</h2>
+
+      <form id="form-estudiante" class="formulario-estudiante">
+
+        <!-- MENSAJES DE ERROR -->
+        <div id="mensaje-error" class="mensaje-error"></div>
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" id="apellidos" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label for="nota" class="form-label">Nota</label>
+          <input type="number" id="nota" class="form-control" min="0" max="100">
+        </div>
+
+        <button type="submit" class="btn btn-agregar">
+          Agregar Estudiante
+        </button>
+
+      </form>
+    </section>
+
+    <!-- TABLA DE ESTUDIANTES -->
+    <section class="mb-5">
+      <h2 class="titulo-seccion">Lista de Estudiantes</h2>
+
+      <div class="table-responsive">
+        <table class="table tabla-estudiantes">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Nota</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabla-estudiantes"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- RESUMEN -->
+    <section class="resumen">
+      <h2 class="titulo-seccion">Resumen de Notas</h2>
+
+      <p>
+        Estudiante con mayor nota:
+        <span id="mayor-nota"></span>
+      </p>
+
+      <p>
+        Promedio de notas:
+        <span id="promedio-notas"></span>
+      </p>
+
+      <p>
+        Nota más baja:
+        <span id="menor-nota"></span>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Registro de Estudiantes. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>
